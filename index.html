@@ -3,136 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junaid Medical Store | Premium Healthcare & Pharmacy</title>
+    <title>Junaid Medical Store | Premium Healthcare | Puran Rd, Aloch</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --medical-blue: #0ea5e9;
-            --deep-navy: #0f172a;
+            --medical-blue: #0ea5e9; /* Modern Medical Blue */
+            --deep-navy: #0f172a;    /* Professional Dark Blue */
             --soft-white: #f8fafc;
-            --emerald: #10b981;
-            --shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --trust-green: #10b981;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
         body { background-color: var(--soft-white); color: var(--deep-navy); scroll-behavior: smooth; }
 
-        /* Navigation */
+        /* Professional Nav */
         nav {
             position: fixed; width: 100%; top: 0; z-index: 1000;
-            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
             display: flex; justify-content: space-between; align-items: center;
             padding: 1rem 8%; border-bottom: 1px solid #e2e8f0;
         }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--medical-blue); }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--medical-blue); text-decoration: none; }
         .logo span { color: var(--deep-navy); }
 
-        /* Hero Section */
+        .nav-links { display: flex; align-items: center; list-style: none; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { text-decoration: none; color: var(--deep-navy); font-weight: 600; font-size: 0.95rem; }
+
+        /* OWNER PROFILE PICTURE SLOT */
+        .owner-profile {
+            width: 45px; height: 45px; border-radius: 50%;
+            border: 2px solid var(--medical-blue); overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+            background-color: #eee; font-size: 0.7rem; color: #777;
+            text-align: center; font-weight: 700;
+        }
+        .owner-profile img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Modern Hero Section */
         .hero {
-            padding-top: 120px;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: radial-gradient(circle at top left, #e0f2fe, transparent 50%);
+            padding-top: 140px; padding-bottom: 100px;
+            min-height: 90vh; display: flex; align-items: center; justify-content: center;
+            background: radial-gradient(circle at top left, #e0f2fe, transparent 70%);
             text-align: center;
         }
         .hero-content { max-width: 800px; padding: 0 20px; }
-        .hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
-        .badge { background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 20px; display: inline-block; }
+        .hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
+        .hero p { font-size: 1.25rem; color: #64748b; margin-bottom: 30px; }
+        .hero span.highlight { color: var(--medical-blue); }
 
-        /* Product Grid */
-        .section-title { text-align: center; margin: 80px 0 40px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 0 8%; }
-        .product-card {
-            background: white; border-radius: 24px; padding: 15px;
+        /* Advanced Categories Grid */
+        .section-title { text-align: center; margin: 100px 0 50px; }
+        .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding: 0 8%; }
+        
+        .category-card {
+            background: white; border-radius: 24px; padding: 30px;
             box-shadow: var(--shadow); transition: 0.4s ease;
-            border: 1px solid #f1f5f9;
+            border: 1px solid #f1f5f9; text-align: left;
         }
-        .product-card:hover { transform: translateY(-10px); border-color: var(--medical-blue); }
-        .product-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 18px; margin-bottom: 15px; }
-        .price-tag { color: var(--medical-blue); font-weight: 700; font-size: 1.2rem; }
+        .category-card:hover { transform: translateY(-8px); border-color: var(--medical-blue); }
+        .icon-box { width: 60px; height: 60px; background: rgba(14, 165, 233, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--medical-blue); font-size: 1.5rem; margin-bottom: 20px; }
+        .category-card h3 { margin-bottom: 15px; font-weight: 700; }
+        .category-card p { color: #64748b; font-size: 0.95rem; }
 
-        /* Maps Section */
-        .location-section { padding: 80px 8%; background: white; }
+        /* Location Section WITH Plus Code map */
+        .location-section { padding: 100px 8%; background: white; margin-top: 100px; }
+        .location-info { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
+        .info-box h3 { font-size: 2rem; margin-bottom: 20px; }
+        .plus-code { font-weight: 800; color: var(--medical-blue); font-size: 1.1rem; margin-top: 15px; }
+
         .map-container { 
-            width: 100%; height: 450px; border-radius: 30px; overflow: hidden; 
-            box-shadow: var(--shadow); margin-top: 30px;
+            width: 100%; height: 500px; border-radius: 30px; overflow: hidden; 
+            box-shadow: var(--shadow); border: 2px solid #e2e8f0;
         }
 
         /* Floating WhatsApp */
         .whatsapp-float {
             position: fixed; bottom: 30px; right: 30px;
-            background: #25d366; color: white; width: 60px; height: 60px;
+            background: #25d366; color: white; width: 65px; height: 65px;
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 1000;
+            font-size: 32px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 1000;
+            text-decoration: none; transition: 0.3s;
         }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
-        footer { background: var(--deep-navy); color: white; padding: 60px 8%; margin-top: 100px; }
+        footer { background: var(--deep-navy); color: white; padding: 80px 8%; margin-top: 100px; text-align: center; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .category-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
+            .location-info { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">JUNAID <span>MEDICAL</span></div>
-        <div class="nav-links">
-            <a href="#products" style="text-decoration:none; margin-right:20px; color:var(--deep-navy);">Store</a>
-            <a href="#location" style="text-decoration:none; color:var(--deep-navy);">Our Location</a>
-        </div>
+        <a href="#" class="logo">JUNAID <span>MEDICAL</span></a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#location">Find Us</a></li>
+            <li><a href="https://wa.me/923000000000" style="color:var(--trust-green); font-weight:700;">Order Now</a></li>
+            <li>
+                <div class="owner-profile">
+                    <img src="owner.jpg" alt="Owner" onerror="this.style.display='none'; this.parentElement.innerText='Owner Profile'">
+                </div>
+            </li>
+        </ul>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <span class="badge">DRAP CERTIFIED PHARMACY</span>
-            <h1>Your Trusted Partner in <span style="color:var(--medical-blue)">Better Health.</span></h1>
-            <p style="font-size: 1.2rem; color: #64748b; margin-top: 20px;">Premium quality medicine, surgical tools, and healthcare consultations delivered with integrity.</p>
+            <span style="background: #dcfce7; color: #166534; padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700;">DRAP CERTIFIED PHARMACY</span>
+            <h1>Trust. Care. <span class="highlight">Authenticity.</span></h1>
+            <p>Junaid Medical Store provides the highest quality medicine, medical tools, and certified professional healthcare solutions to the community.</p>
         </div>
     </section>
 
-    <section id="products">
+    <section id="services" class="services">
         <div class="section-title">
-            <h2>Essential Pharmacy</h2>
-            <p>Authentic products sourced from global manufacturers.</p>
+            <h2>Our Core Competencies</h2>
+            <p>Certified products sourced directly from manufacturers.</p>
         </div>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500" alt="Medicine">
-                <h3>Tablets & Capsules</h3>
-                <p style="color:#64748b; margin: 10px 0;">Wide range of life-saving and daily medicines (Panadol, Calamax etc).</p>
-                <div class="price-tag">Authentic Stock</div>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="icon-box"><i class="fas fa-prescription-bottle-medical"></i></div>
+                <h3>Authentic Medicine</h3>
+                <p>Full range of genuine prescriptions, from Panadol to specialized capsules (DRAP Certified).</p>
             </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1550572017-ed20015ade66?q=80&w=500" alt="Syrup">
-                <h3>Syrups & Suspensions</h3>
-                <p style="color:#64748b; margin: 10px 0;">Pediatric and adult care liquids for quick recovery.</p>
-                <div class="price-tag">Certified Storage</div>
+            <div class="category-card">
+                <div class="icon-box"><i class="fas fa-vial-medical"></i></div>
+                <h3>Syrups & Liquids</h3>
+                <p>Wide selection of pediatric, adult, and specialized medical syrups for effective recovery.</p>
             </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1583946099379-f9c9cb8bc030?q=80&w=500" alt="Healthcare">
-                <h3>Medical Equipment</h3>
-                <p style="color:#64748b; margin: 10px 0;">Blood pressure monitors, Nebulizers, and Glucometers.</p>
-                <div class="price-tag">Premium Tools</div>
+            <div class="category-card">
+                <div class="icon-box"><i class="fas fa-stethoscope"></i></div>
+                <h3>Medical Tools</h3>
+                <p>Top-quality surgical equipment, diagnostics, and patient care tools for home and clinic use.</p>
             </div>
         </div>
     </section>
 
     <section class="location-section" id="location">
-        <div class="section-title">
-            <h2>Visit Our Store</h2>
-            <p>Open 24/7 for your emergency medical needs.</p>
-        </div>
-        <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.456!2d74.3!3d31.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMwJzAwLjAiTiA3NMKwMTgnMDAuMCJF!5e0!3m2!1sen!2spk!4v1711680000000!5m2!1sen!2spk" 
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="location-info">
+            <div class="info-box">
+                <h3>Our Store Location</h3>
+                <p style="color: #64748b;">Find us easily on Puran Rd, Aloch. We provide 24/7 service for your emergency medical needs.</p>
+                <div class="plus-code">Plus Code: PMQM+CRF</div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.467899738096!2d72.76867011520023!3d34.45327298048689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dc9550a20fb86b%3A0x6b779435889e223!2sPuran%20Rd%2C%20Aloch%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1689260000000!5m2!1sen!2sus" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
     </section>
 
@@ -141,20 +169,9 @@
     </a>
 
     <footer>
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
-            <div style="max-width: 300px;">
-                <h3>Junaid Medical Store</h3>
-                <p style="margin-top:15px; color:#94a3b8;">Providing healthcare excellence to the community with professional pharmaceutical services.</p>
-            </div>
-            <div>
-                <h4>Contact Info</h4>
-                <p style="margin-top:15px; color:#94a3b8;">📍 Main Bazar Road, Your City</p>
-                <p style="color:#94a3b8;">📞 +92 300 0000000</p>
-            </div>
-        </div>
-        <p style="text-align:center; margin-top:50px; color:#475569; font-size:0.8rem;">&copy; 2026 Junaid Medical & Healthcare. All rights reserved.</p>
+        <div style="font-weight:700; margin-bottom:20px; font-size:1.2rem;">Junaid Medical Store & Healthcare</div>
+        <p style="color:#94a3b8; font-size:0.9rem;">© 2026 Premium Pharmaceutical Solutions. All rights reserved.</p>
     </footer>
 
 </body>
-                                       </html>
-                                       
+</html>
