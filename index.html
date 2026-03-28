@@ -5,196 +5,218 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Junaid Medical Store</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  font-family: 'Poppins', sans-serif;
-  margin:0;
-  background:#f4f9fb;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
-/* Navbar */
-nav {
-  background:#0a8f8f;
-  padding:15px;
-  color:#fff;
+body{background:#f7f9fc;color:#1a1a1a;}
+
+/* NAVBAR */
+nav{
   display:flex;
   justify-content:space-between;
-  align-items:center;
+  padding:20px 8%;
+  background:#ffffff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* Hero */
-.hero {
-  background:linear-gradient(to right,#0a8f8f,#00c6a7);
-  color:white;
-  padding:80px 20px;
-  text-align:center;
-  animation: fadeIn 2s ease;
-}
+nav h2{color:#0a8f8f;}
+nav a{margin-left:20px;text-decoration:none;color:#333;font-weight:500;}
 
-.hero h1 {
-  font-size:40px;
-}
-
-/* Sections */
-.section {
-  padding:50px 20px;
-  text-align:center;
-}
-
-/* Cards */
-.cards {
+/* HERO */
+.hero{
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 8%;
+  background:linear-gradient(135deg,#0a8f8f,#00c6a7);
+  color:#fff;
 }
 
-.card {
-  background:white;
-  padding:20px;
-  margin:15px;
-  width:260px;
-  border-radius:12px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
+.hero-text{
+  max-width:500px;
 }
 
-.card:hover {
-  transform:translateY(-10px);
-}
-
-/* Images */
-.card img {
-  width:100%;
-  border-radius:10px;
-  height:150px;
-  object-fit:cover;
-}
-
-/* Owner Section */
-.owner {
-  background:#fff;
-  padding:40px;
-  text-align:center;
-}
-
-.owner img {
-  width:150px;
-  height:150px;
-  border-radius:50%;
+.hero h1{
+  font-size:48px;
   margin-bottom:15px;
 }
 
-/* Button */
-.btn {
-  background:#0a8f8f;
-  color:white;
+.hero p{opacity:0.9;margin-bottom:20px;}
+
+.btn{
+  background:#fff;
+  color:#0a8f8f;
   padding:12px 25px;
+  border-radius:30px;
   border:none;
-  border-radius:6px;
   cursor:pointer;
+  font-weight:600;
 }
 
-/* Map */
-.map {
+/* HERO IMAGE */
+.hero img{
+  width:350px;
+  border-radius:20px;
+}
+
+/* SECTION */
+.section{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+/* PRODUCT IMAGE */
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+/* OWNER */
+.owner{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  text-align:left;
+  padding:80px 8%;
+}
+
+.owner img{
+  width:200px;
+  border-radius:20px;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  padding:60px;
+  background:#0a8f8f;
+  color:white;
+}
+
+/* MAP */
+iframe{
   width:100%;
   height:300px;
   border:0;
 }
 
-/* WhatsApp */
-.whatsapp {
+/* WHATSAPP */
+.whatsapp{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25D366;
-  color:white;
+  color:#fff;
   padding:15px;
   border-radius:50%;
   font-size:22px;
   text-decoration:none;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
-}
-
-footer {
-  background:#0a8f8f;
-  color:white;
-  text-align:center;
-  padding:20px;
+/* MOBILE */
+@media(max-width:768px){
+  .hero{flex-direction:column;text-align:center;}
+  .owner{flex-direction:column;text-align:center;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
   <h2>Junaid Medical</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+  </div>
 </nav>
 
-<div class="hero">
-  <h1>Junaid Medical Store</h1>
-  <p>Your Trusted Pharmacy</p>
-  <a href="https://wa.me/923235957001">
-    <button class="btn">Order on WhatsApp</button>
-  </a>
-</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Your Trusted Medical Store</h1>
+    <p>All medicines, healthcare products & 24/7 support available.</p>
+    <a href="https://wa.me/923235957001">
+      <button class="btn">Order on WhatsApp</button>
+    </a>
+  </div>
+  <img src="https://images.unsplash.com/photo-1588776814546-ec7e0f0b76dc">
+</section>
 
-<!-- Products Section -->
-<div class="section">
+<!-- PRODUCTS -->
+<section class="section">
   <h2>Our Products</h2>
-  <div class="cards">
-
+  <div class="grid">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1580281657527-47c67c53c0b6">
       <h3>Tablets</h3>
-      <p>All kinds of tablets available</p>
+      <p>All types of tablets available</p>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde">
       <h3>Syrups</h3>
-      <p>Quality cough & health syrups</p>
+      <p>High quality syrups</p>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1588776814546-ec7e0f0b76dc">
-      <h3>Medical Items</h3>
-      <p>Health care products available</p>
+      <h3>Medical Equipment</h3>
+      <p>Health devices & accessories</p>
     </div>
-
   </div>
-</div>
+</section>
 
-<!-- Owner Section -->
-<div class="owner">
-  <h2>Owner</h2>
-  <img src="owner.jpg" alt="Owner Image">
-  <p>Junaid Medical Store Owner</p>
-</div>
+<!-- OWNER -->
+<section class="owner">
+  <img src="owner.jpg">
+  <div>
+    <h2>Owner</h2>
+    <p>Junaid Medical Store is committed to providing quality medicines and trusted service to the community.</p>
+  </div>
+</section>
 
-<!-- Contact -->
-<div class="section">
-  <h2>Contact</h2>
+<!-- CONTACT -->
+<div class="contact">
+  <h2>Contact Us</h2>
   <p>📞 0323 5957001</p>
   <p>📍 Near MCB Bank, Aloch Puran Nimklay</p>
 </div>
 
-<!-- Map -->
-<iframe class="map"
-src="https://www.google.com/maps?q=MCB+Bank+Aloch+Puran+Pakistan&output=embed">
-</iframe>
+<!-- MAP -->
+<iframe src="https://www.google.com/maps?q=MCB+Bank+Aloch+Puran+Pakistan&output=embed"></iframe>
 
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/923235957001">💬</a>
-
-<footer>
-  <p>© 2026 Junaid Medical Store</p>
-</footer>
 
 </body>
 </html>
