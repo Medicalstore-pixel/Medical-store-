@@ -1,192 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junaid Medical Store | Premium Healthcare | Near MCB Aloch</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
-    <style>
-        :root {
-            --medical-blue: #0ea5e9;
-            --deep-navy: #0f172a;
-            --soft-white: #f8fafc;
-            --trust-green: #10b981;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junaid Medical Store</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--soft-white); color: var(--deep-navy); scroll-behavior: smooth; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
-        /* Modern Navigation */
-        nav {
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1rem 8%; border-bottom: 1px solid #e2e8f0;
-        }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--medical-blue); text-decoration: none; }
-        .logo span { color: var(--deep-navy); }
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  background:#f4f9fb;
+}
 
-        /* Owner Profile */
-        .owner-profile {
-            width: 45px; height: 45px; border-radius: 50%;
-            border: 2px solid var(--medical-blue); overflow: hidden;
-            background: #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .owner-profile img { width: 100%; height: 100%; object-fit: cover; }
+/* Navbar */
+nav {
+  background:#0a8f8f;
+  padding:15px;
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-        /* Hero Section with Sick Child Image */
-        .hero {
-            padding-top: 140px; padding-bottom: 80px;
-            background: radial-gradient(circle at top right, #e0f2fe, transparent 70%);
-            display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; padding-left: 8%; padding-right: 8%;
-        }
-        .hero-text { max-width: 600px; text-align: left; }
-        .hero-text h1 { font-size: 3.8rem; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
-        .hero-text p { font-size: 1.25rem; color: #64748b; margin-bottom: 30px; }
-        
-        /* Sick Child Image Frame */
-        .hero-image-frame {
-            width: 100%; height: 500px; border-radius: 30px; overflow: hidden;
-            box-shadow: var(--shadow); border: 8px solid white; transition: 0.3s;
-        }
-        .hero-image-frame img { width: 100%; height: 100%; object-fit: cover; }
-        .hero-image-frame:hover { transform: scale(1.02); }
+nav a {
+  color:#fff;
+  text-decoration:none;
+  margin:0 10px;
+  font-weight:500;
+}
 
-        /* Categories (Tablets & Sharbat) */
-        .section-title { text-align: center; margin: 100px 0 50px; }
-        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 8%; }
-        
-        .category-card {
-            background: white; border-radius: 24px; overflow: hidden;
-            box-shadow: var(--shadow); transition: 0.4s ease;
-            border: 1px solid #f1f5f9; text-align: center;
-        }
-        .category-card:hover { transform: translateY(-8px); border-color: var(--medical-blue); }
-        .category-card img { width: 100%; height: 260px; object-fit: cover; }
-        .category-card-info { padding: 30px; }
-        .category-card h3 { margin-bottom: 10px; font-weight: 700; font-size: 1.3rem; }
-        .category-card p { color: #64748b; font-size: 0.95rem; }
+/* Hero */
+.hero {
+  background:linear-gradient(to right,#0a8f8f,#00c6a7);
+  color:white;
+  padding:80px 20px;
+  text-align:center;
+}
 
-        /* Order Button */
-        .order-btn {
-            display: inline-block; padding: 12px 25px; background: var(--trust-green);
-            color: white; text-decoration: none; border-radius: 50px; font-weight: 600; margin-top: 15px;
-            transition: 0.3s;
-        }
-        .order-btn:hover { background: #059669; }
+.hero h1 {
+  font-size:40px;
+  margin-bottom:10px;
+}
 
-        /* Map Section (Near MCB ALOCH) */
-        .map-section { padding: 100px 8%; background: white; margin-top: 100px; }
-        .map-wrapper { 
-            width: 100%; height: 500px; border-radius: 30px; overflow: hidden; 
-            box-shadow: var(--shadow); border: 6px solid #e2e8f0;
-        }
+/* Sections */
+.section {
+  padding:50px 20px;
+  text-align:center;
+}
 
-        /* WhatsApp Float */
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px;
-            background: #25d366; color: white; width: 65px; height: 65px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 32px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 1000;
-            text-decoration: none; transition: 0.3s;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
+/* Cards */
+.cards {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
 
-        footer { background: var(--deep-navy); color: white; padding: 60px; text-align: center; margin-top: 100px; }
+.card {
+  background:white;
+  padding:20px;
+  margin:15px;
+  width:250px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
 
-        @media (max-width: 1024px) {
-            .hero { grid-template-columns: 1fr; text-align: center; }
-            .hero-text h1 { font-size: 2.8rem; }
-            .hero-text { max-width: 800px; margin: 0 auto; }
-            .hero-image-frame { height: 400px; margin: 0 auto; }
-        }
-    </style>
+/* Button */
+.btn {
+  background:#0a8f8f;
+  color:white;
+  padding:12px 25px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.btn:hover {
+  background:#066666;
+}
+
+/* Map */
+.map {
+  width:100%;
+  height:300px;
+  border:0;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+  box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background:#0a8f8f;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+</style>
 </head>
+
 <body>
 
-    <nav>
-        <a href="#" class="logo">JUNAID <span>MEDICAL</span></a>
-        <div class="owner-profile">
-            <img src="owner.jpg" alt="Junaid (Owner)" onerror="this.parentElement.innerHTML='Junaid'">
-        </div>
-    </nav>
+<!-- Navbar -->
+<nav>
+  <h2>Junaid Medical</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
 
-    <section class="hero" data-aos="fade-up">
-        <div class="hero-text">
-            <span style="background: #e0f2fe; color: var(--medical-blue); padding: 8px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">DRAP Certified Pharmacy</span>
-            <h1>Certified Medicine <span style="color:var(--medical-blue)">Care</span></h1>
-            <p>Junaid Medical Store provides the highest quality authentic medicines (tablets & syrups) and surgical care equipment for your complete recovery.</p>
-        </div>
-        <div class="hero-image-frame" data-aos="zoom-in">
-            <img src="sick_child.jpg" alt="Sick child receiving care" onerror="this.src='https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200'">
-        </div>
-    </section>
+<!-- Hero -->
+<div class="hero">
+  <h1>Junaid Medical Store</h1>
+  <p>Your Trusted Pharmacy | All Medicines Available</p>
+  <a href="https://wa.me/923235957001">
+    <button class="btn">Order on WhatsApp</button>
+  </a>
+</div>
 
-    <section id="stock" class="stock">
-        <div class="section-title" data-aos="fade-right">
-            <h2>Our Complete Stock</h2>
-            <p>Quality medicine and healthcare products, sourced from genuine distributors.</p>
-        </div>
-        <div class="category-grid">
-            <div class="category-card" data-aos="zoom-in">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=600" alt="Authentic Tablets">
-                <div class="category-card-info">
-                    <h3>Certified Tablets</h3>
-                    <p style="color:#64748b; margin-bottom:15px;">Genuine prescriptions and OTC medicines (Panadol, Calamax etc.).</p>
-                    <a href="https://wa.me/923000000000" class="order-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
-                </div>
-            </div>
-            
-            <div class="category-card" data-aos="zoom-in" data-aos-delay="150">
-                <img src="https://images.unsplash.com/photo-1550572017-ed20015ade66?q=80&w=600" alt="Effective Syrups">
-                <div class="category-card-info">
-                    <h3>Quality Syrups</h3>
-                    <p style="color:#64748b; margin-bottom:15px;">Effective pediatric and adult syrups for rapid health recovery.</p>
-                    <a href="https://wa.me/923000000000" class="order-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
-                </div>
-            </div>
+<!-- Services -->
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">💊 All Medicines Available</div>
+    <div class="card">🚚 Home Delivery</div>
+    <div class="card">📞 24/7 Support</div>
+  </div>
+</div>
 
-            <div class="category-card" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://images.unsplash.com/photo-1583946099379-f9c9cb8bc030?q=80&w=600" alt="Healthcare Tools">
-                <div class="category-card-info">
-                    <h3>Surgical Tools</h3>
-                    <p style="color:#64748b; margin-bottom:15px;">Premium clinical diagnostics, BP monitors, and patient care equipment.</p>
-                    <a href="https://wa.me/923000000000" class="order-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Contact -->
+<div class="section">
+  <h2>Contact Us</h2>
+  <p>📞 0323 5957001</p>
+  <p>📍 Near MCB Bank, Aloch Puran Nimklay</p>
+</div>
 
-    <section class="map-section" id="location">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Our Live Location</h2>
-            <p><i class="fas fa-map-marker-alt" style="color:red"></i> Near MCB BANK, ALOCH PURAN NIMKLAY</p>
-        </div>
-        <div class="map-wrapper" data-aos="zoom-out-up">
-            <iframe 
-                src="http://googleusercontent.com/maps.google.com/6" 
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
+<!-- Live Map -->
+<iframe class="map"
+src="https://www.google.com/maps?q=MCB+Bank+Aloch+Puran+Pakistan&output=embed">
+</iframe>
 
-    <a href="https://wa.me/923000000000" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+<!-- WhatsApp Floating Button -->
+<a class="whatsapp" href="https://wa.me/923235957001">💬</a>
 
-    <footer>
-        <p style="font-weight: 800; font-size: 1.3rem; margin-bottom: 10px;">Junaid Medical Store & Healthcare</p>
-        <p style="color:#94a3b8; font-size:0.9rem;">📍 Puran Rd, Near MCB Bank, Aloch Nimklay</p>
-        <p style="color: #475569; font-size: 0.8rem; margin-top: 30px;">© 2026 Premium Pharmaceutical Solutions. All rights reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer>
+  <p>© 2026 Junaid Medical Store | All Rights Reserved</p>
+</footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1200, once: true });
-    </script>
 </body>
 </html>
