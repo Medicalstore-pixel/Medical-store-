@@ -1,252 +1,37 @@
-To make this as clean and functional as possible, I have combined the HTML and CSS into a single file. This makes it easy to save and open instantly in any web browser.
-I’ve designed this with a "Medical Blue" and "Trust Green" palette, featuring a responsive layout, a professional header, and a functional-looking service section.
-Instructions:
- * Copy the code below.
- * Save it as index.html on your computer.
- * Open that file with Google Chrome or any browser.
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junaid Medical Store | Professional Healthcare</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<section class="products" id="pharmacy" style="padding: 80px 8%; background: white;">
+    <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem;">Essential <span style="color:var(--brand-blue)">Pharmacy</span></h2>
     
-    <style>
-        /* CSS STYLES */
-        :root {
-            --primary-blue: #0056b3;
-            --secondary-blue: #007bff;
-            --medical-green: #28a745;
-            --light-grey: #f8f9fa;
-            --dark-text: #2c3e50;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #fff;
-            color: var(--dark-text);
-            line-height: 1.6;
-        }
-
-        /* Header & Navigation */
-        header {
-            background: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            text-transform: uppercase;
-        }
-
-        .logo span {
-            color: var(--medical-green);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark-text);
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--secondary-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), 
-                        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            background: var(--medical-green);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: 0.3s;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background: #218838;
-            transform: translateY(-2px);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 80px 10%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            background: var(--light-grey);
-        }
-
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: 0.4s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card i {
-            font-size: 3rem;
-            color: var(--secondary-blue);
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            margin-bottom: 15px;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 50px 10% 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            margin-bottom: 30px;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 15px;
-            transition: 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: var(--medical-green);
-        }
-
-        .copyright {
-            border-top: 1px solid #333;
-            padding-top: 20px;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            nav { display: none; }
-            .hero h1 { font-size: 2rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">Junaid <span>Medical</span></div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Trusted Healthcare At Your Doorstep</h1>
-        <p>Junaid Medical Store provides authentic medicines, surgical equipment, and health consultations with professional care.</p>
-        <a href="https://wa.me/yournumber" class="btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
-    </section>
-
-    <section class="features" id="services">
-        <div class="card">
-            <i class="fas fa-prescription-bottle-medical"></i>
-            <h3>Authentic Medicines</h3>
-            <p>We supply 100% genuine medicines from top pharmaceutical brands.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-truck-fast"></i>
-            <h3>Home Delivery</h3>
-            <p>Quick and safe delivery of your healthcare needs right to your home.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-user-nurse"></i>
-            <h3>Expert Advice</h3>
-            <p>Our licensed pharmacists are always here to guide your prescription.</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <h2>Junaid Medical Store</h2>
-            <p>Serving the community with excellence and integrity.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+        
+        <div class="product-card" style="border: 1px solid #eee; border-radius: 15px; overflow: hidden; transition: 0.3s;">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80" alt="Panadol" style="width: 100%; height: 200px; object-fit: cover;">
+            <div style="padding: 20px;">
+                <span style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700;">TABLETS</span>
+                <h4 style="margin: 10px 0;">Pain Relief (Panadol)</h4>
+                <p style="color: #64748b; font-size: 0.9rem;">Effective relief for fever and body aches.</p>
+                <a href="https://wa.me/923000000000?text=I%20want%20to%20order%20Panadol" style="display: block; margin-top: 15px; color: var(--brand-blue); font-weight: 600; text-decoration: none;">Order Now →</a>
             </div>
         </div>
-        <div class="copyright">
-            &copy; 2026 Junaid Medical Store. All Rights Reserved.
+
+        <div class="product-card" style="border: 1px solid #eee; border-radius: 15px; overflow: hidden; transition: 0.3s;">
+            <img src="https://images.unsplash.com/photo-1550572017-ed20015ade66?auto=format&fit=crop&w=500&q=80" alt="Calamax" style="width: 100%; height: 200px; object-fit: cover;">
+            <div style="padding: 20px;">
+                <span style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700;">SYRUP / TOPICAL</span>
+                <h4 style="margin: 10px 0;">Calamax Suspension</h4>
+                <p style="color: #64748b; font-size: 0.9rem;">Expert care for skin irritation and allergies.</p>
+                <a href="https://wa.me/923000000000?text=I%20want%20to%20order%20Calamax" style="display: block; margin-top: 15px; color: var(--brand-blue); font-weight: 600; text-decoration: none;">Order Now →</a>
+            </div>
         </div>
-    </footer>
 
-</body>
-</html>
+        <div class="product-card" style="border: 1px solid #eee; border-radius: 15px; overflow: hidden; transition: 0.3s;">
+            <img src="https://images.unsplash.com/photo-1471864190281-ad5fe9bb0724?auto=format&fit=crop&w=500&q=80" alt="Vitamins" style="width: 100%; height: 200px; object-fit: cover;">
+            <div style="padding: 20px;">
+                <span style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700;">WELLNESS</span>
+                <h4 style="margin: 10px 0;">Daily Multivitamins</h4>
+                <p style="color: #64748b; font-size: 0.9rem;">Boost your immunity and energy levels.</p>
+                <a href="https://wa.me/923000000000?text=I%20want%20to%20order%20Vitamins" style="display: block; margin-top: 15px; color: var(--brand-blue); font-weight: 600; text-decoration: none;">Order Now →</a>
+            </div>
+        </div>
 
+    </div>
+</section>
