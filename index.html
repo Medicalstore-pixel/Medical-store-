@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junaid Medical Store | Near MCB Bank Aloch</title>
+    <title>Junaid Medical Store | MCB Bank Aloch Puran</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,7 +12,7 @@
     <style>
         :root { --blue: #0ea5e9; --navy: #0f172a; --green: #10b981; --bg: #f8fafc; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background: white; color: var(--navy); overflow-x: hidden; }
+        body { background: white; color: var(--navy); overflow-x: hidden; scroll-behavior: smooth; }
 
         nav {
             position: fixed; width: 100%; top: 0; z-index: 1000;
@@ -29,20 +29,22 @@
             background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
         }
         .hero h1 { font-size: 3.5rem; line-height: 1.1; font-weight: 800; margin-bottom: 20px; }
-        .hero-img { border-radius: 30px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 10px solid white; }
+        .hero-img { border-radius: 30px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 8px solid white; }
+        .hero-img img { width: 100%; display: block; }
 
         .products { padding: 80px 8%; background: var(--bg); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
         .card img { width: 100%; height: 250px; object-fit: cover; }
         .card-body { padding: 25px; text-align: center; }
 
         .map-section { padding: 80px 8%; text-align: center; }
-        .map-box { width: 100%; height: 450px; border-radius: 30px; overflow: hidden; margin-top: 30px; border: 5px solid #eee; }
+        .map-box { width: 100%; height: 450px; border-radius: 30px; overflow: hidden; margin-top: 30px; border: 8px solid #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 
         .wa-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
         
+        footer { padding: 50px; background: var(--navy); color: white; text-align: center; margin-top: 50px; }
+
         @media (max-width: 968px) { .hero { grid-template-columns: 1fr; text-align: center; } }
     </style>
 </head>
@@ -51,64 +53,55 @@
     <nav>
         <a href="#" class="brand">JUNAID <span>PHARMACY</span></a>
         <div class="profile">
-            <img src="owner.jpg" alt="Owner" onerror="this.src='https://ui-avatars.com/api/?name=Junaid'">
+            <img src="owner.jpg" alt="Junaid" onerror="this.src='https://ui-avatars.com/api/?name=Junaid'">
         </div>
     </nav>
 
     <section class="hero" data-aos="fade-up">
         <div class="hero-text">
-            <span style="color:var(--blue); font-weight:800; text-transform:uppercase; letter-spacing:1px;">Trusted Medical Store</span>
-            <h1>Caring for your <br><span style="color:var(--blue)">Health & Family</span></h1>
-            <p style="color:#64748b; margin-top:15px;">Aloch Puran ki sabse behtreen pharmacy jahan asli dawaiyan aur behtreen surgical tools milte hain.</p>
+            <span style="color:var(--blue); font-weight:800; text-transform:uppercase;">Authentic Care</span>
+            <h1>Trust & Health <br><span style="color:var(--blue)">For Your Family</span></h1>
+            <p style="color:#64748b; margin-top:15px;">Aloch Puran ki sabse bharosemand pharmacy, MCB Bank ke qareeb. Asli dawaiyan aur behtreen surgical tools hamari pehchan hain.</p>
         </div>
         <div class="hero-img">
-            <img src="sick_child.jpg" alt="Sick Child Care" onerror="this.src='https://images.unsplash.com/photo-1584030373081-f37b7bb4fa82?q=80&w=800'">
+            <img src="sick_child.jpg" alt="Child Health Care" onerror="this.src='https://images.unsplash.com/photo-1584030373081-f37b7bb4fa82?q=80&w=800'">
         </div>
     </section>
 
     <section class="products">
-        <h2 style="text-align:center; margin-bottom:50px; font-size:2.5rem;">Pharmacy Inventory</h2>
+        <h2 style="text-align:center; margin-bottom:50px;">Hamari Products</h2>
         <div class="grid">
             <div class="card" data-aos="zoom-in">
                 <img src="tablets.jpg" alt="Tablets" onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=600'">
-                <div class="card-body">
-                    <h3>Genuine Tablets</h3>
-                    <p style="color:#64748b; margin:10px 0;">Har kism ki asli tablets aur capsules.</p>
-                    <a href="https://wa.me/923000000000" style="color:var(--green); font-weight:700; text-decoration:none;">Order Now →</a>
-                </div>
+                <div class="card-body"><h3>Tablets & Capsules</h3><p>Genuine Stock</p></div>
             </div>
             <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                <img src="syrups.jpg" alt="Sharbat" onerror="this.src='https://images.unsplash.com/photo-1550572017-ed20015ade66?q=80&w=600'">
-                <div class="card-body">
-                    <h3>Quality Syrups</h3>
-                    <p style="color:#64748b; margin:10px 0;">Bacho aur baron ke liye har tarah ke sharbat.</p>
-                    <a href="https://wa.me/923000000000" style="color:var(--green); font-weight:700; text-decoration:none;">Order Now →</a>
-                </div>
+                <img src="syrups.jpg" alt="Syrups" onerror="this.src='https://images.unsplash.com/photo-1550572017-ed20015ade66?q=80&w=600'">
+                <div class="card-body"><h3>Quality Syrups</h3><p>Effective Sharbat</p></div>
             </div>
             <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                <img src="equipment.jpg" alt="Tools" onerror="this.src='https://images.unsplash.com/photo-1583946099379-f9c9cb8bc030?q=80&w=600'">
-                <div class="card-body">
-                    <h3>Medical Tools</h3>
-                    <p style="color:#64748b; margin:10px 0;">BP machine, Sugar machine aur surgical tools.</p>
-                    <a href="https://wa.me/923000000000" style="color:var(--green); font-weight:700; text-decoration:none;">Order Now →</a>
-                </div>
+                <img src="equipment.jpg" alt="Surgical" onerror="this.src='https://images.unsplash.com/photo-1583946099379-f9c9cb8bc030?q=80&w=600'">
+                <div class="card-body"><h3>Surgical Tools</h3><p>Health Monitors</p></div>
             </div>
         </div>
     </section>
 
-    <section class="map-section" id="location">
+    <section class="map-section">
         <h2 data-aos="fade-up">Live Location</h2>
-        <p style="color:#64748b;"><i class="fas fa-map-marker-alt" style="color:red;"></i> Near MCB BANK, ALOCH PURAN NIMKLAY</p>
+        <p><i class="fas fa-map-marker-alt" style="color:red;"></i> Near MCB BANK, ALOCH PURAN NIMKLAY</p>
         <div class="map-box" data-aos="zoom-in">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.685361048633!2d72.6710787!3d34.8390748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38de617f1a3994e1%3A0xc47be668f4e6459f!2sMCB%20Bank%20Aloch!5e0!3m2!1sen!2spk!4v1711670000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.473539824249!2d72.7681023753381!3d34.74366668105658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38de614138e4a911%3A0xe542a178e2448373!2sMCB%20Bank!5e0!3m2!1sen!2spk!4v1711670000000!5m2!1sen!2spk" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
     <a href="https://wa.me/923000000000" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
 
-    <footer style="padding:50px; background:var(--navy); color:white; text-align:center;">
-        <h3>Junaid Medical Store</h3>
-        <p style="font-size:0.8rem; color:#94a3b8; margin-top:10px;">© 2026 Puran Rd, Near MCB Bank, Aloch Nimklay</p>
+    <footer>
+        <h3>Junaid Medical Store & Healthcare</h3>
+        <p>Aloch Nimklay, Puran Road, Shangla.</p>
+        <p style="font-size:0.8rem; color:#94a3b8; margin-top:20px;">© 2026 Developed for Junaid Medical Store.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
