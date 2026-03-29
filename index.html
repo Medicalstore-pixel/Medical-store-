@@ -97,12 +97,23 @@ background:#0f172a;color:white;text-align:center;padding:50px;
 margin-top:20px;
 font-size:0.85rem;
 color:#94a3b8;
-opacity:0.8;
+opacity:0.9;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
 transition:0.3s;
 }
 .watermark:hover{
 opacity:1;
 color:#38bdf8;
+}
+.wm-img{
+width:28px;
+height:28px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #38bdf8;
 }
 
 /* WHATSAPP */
@@ -220,7 +231,12 @@ Near MCB Bank, Aloch Puran Nimklay, Shangla
 
 <footer>
 <p>📍 Aloch Puran | 📞 03235957001</p>
-<p class="watermark">Created by Hamza Fayaz | 📞 03235957001</p>
+
+<p class="watermark">
+<img src="creat.jpg" class="wm-img">
+<span>Created by Hamza Fayaz | 📞 03235957001</span>
+</p>
+
 </footer>
 
 <a href="https://wa.me/923235957001" class="wa">
