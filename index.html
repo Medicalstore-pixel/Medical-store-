@@ -23,7 +23,7 @@ z-index:1000;
 }
 nav h2{color:#0ea5e9;font-weight:800}
 
-/* HERO */
+/* HERO (UPDATED) */
 .hero{
 height:100vh;
 display:flex;
@@ -31,14 +31,10 @@ align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
-background:url('sick_child.jpg') center/cover no-repeat;
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('sick_child.jpg') center/cover no-repeat;
 position:relative;
-}
-.hero::after{
-content:"";
-position:absolute;
-width:100%;height:100%;
-background:rgba(0,0,0,0.5);
 }
 .hero-content{
 position:relative;
@@ -90,6 +86,19 @@ box-shadow:0 15px 30px rgba(0,0,0,0.08);
 .card:hover{transform:translateY(-10px);}
 .card img{width:100%;height:220px;object-fit:cover;}
 .card h3{text-align:center;padding:20px}
+
+/* MAP */
+.map{
+padding:100px 8%;
+text-align:center;
+}
+.map iframe{
+width:100%;
+height:400px;
+border:none;
+border-radius:20px;
+margin-top:20px;
+}
 
 /* REVIEWS */
 .reviews{
@@ -182,6 +191,34 @@ animation:pulse 2s infinite;
 </div>
 
 </div>
+</section>
+
+<!-- 📍 MAP + BUTTON ADDED -->
+<section class="map">
+<h2>Our Location</h2>
+
+<iframe src="https://maps.google.com/maps?q=MCB%20Bank%20Aloch%20Puran%20Nimklay%20Shangla&z=15&output=embed"></iframe>
+
+<div style="margin-top:20px;">
+<a href="https://www.google.com/maps/search/?api=1&query=MCB+Bank+Aloch+Puran+Nimklay+Shangla"
+target="_blank"
+style="
+background:#0ea5e9;
+color:white;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+">
+📍 Open Live Location
+</a>
+</div>
+
+<p style="margin-top:10px;color:#64748b;">
+Near MCB Bank, Aloch Puran Nimklay, Shangla
+</p>
+
 </section>
 
 <section class="reviews">
